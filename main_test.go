@@ -37,7 +37,7 @@ var _ = Describe("Go EduHub 3", Ordered, func() {
 
 	BeforeEach(func() {
 		gin.SetMode(gin.ReleaseMode) //release
-
+		conn.AutoMigrate(&model.Student{}, &model.Course{})
 		err = db.Reset(conn, "students")
 		err = db.Reset(conn, "courses")
 		Expect(err).ShouldNot(HaveOccurred())

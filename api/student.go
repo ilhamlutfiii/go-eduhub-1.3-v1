@@ -49,5 +49,5 @@ func (s *studentAPI) DeleteStudent(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, model.ErrorResponse{Error: err.Error()})
 		return
 	}
-	c.JSON(http.StatusOK, model.SuccessResponse{Message: "delete student success"})
+	c.JSON(http.StatusOK, model.SuccessResponse{Message: "student delete success"})
 }
